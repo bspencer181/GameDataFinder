@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://wallpaper-house.com/data/out/12/wallpaper2you_521440.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: block;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Staatliches', cursive;
+}
+
+.field {
+    text-align: center;
+}
