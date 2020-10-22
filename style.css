@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
   background-image: url('./Assets/wallpaper2you_521440.jpg');
+=======
+  background-image: url("./Assets/wallpaper2you_521440.jpg");
+>>>>>>> origin/Develop
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -10,12 +14,17 @@ h1 {
   color: white;
   text-align: center;
   font-size: 60px;
+<<<<<<< HEAD
   font-family: 'Staatliches', cursive;
+=======
+  font-family: "Staatliches", cursive;
+>>>>>>> origin/Develop
 }
 
 .field {
   text-align: center;
 }
+<<<<<<< HEAD
 /*footer part of  page */
 footer {
   background-color: #343a40;
@@ -30,4 +39,19 @@ footer {
 .icon {
   width: 30px;
   height: 30px;
+=======
+.footers {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+>>>>>>> origin/Develop
 }
