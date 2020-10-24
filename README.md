@@ -6,26 +6,26 @@ With this video game search engine, the user can type in the title of a video ga
 ![Screenshot of search result](https://github.com/bspencer181/Project1/blob/Develop/Assets/P2.png?raw=true)  
 
 ### Built With
- *Created with:  
- -HTML   
- -CSS  
- -JavaScript  
- -jQuery  
- -Bulma    
+ Created with:  
+ *HTML   
+ *CSS  
+ *JavaScript  
+ *jQuery  
+ *Bulma    
  
- *API's used:  
- -Giant Bomb  
-   -(https://www.giantbomb.com/)  
- -RAWG  
-   -(https://rawg.io/apidocs)  
+ API's used:  
+ *Giant Bomb  
+   *(https://www.giantbomb.com/)  
+ *RAWG  
+   *(https://rawg.io/apidocs)  
 
 ### Acknowledgements
-*Created by:  
- -Logan Pippin  
-   -https://github.com/LoganPippin  
- -Beth Spencer  
-   -https://github.com/bspencer181  
- -Parth Patel  
-   -https://github.com/parth167  
+Created by:  
+ *Logan Pippin  
+   *https://github.com/LoganPippin  
+ *Beth Spencer  
+   *https://github.com/bspencer181  
+ *Parth Patel  
+   *https://github.com/parth167  
   
  Project Link:
