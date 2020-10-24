@@ -31,3 +31,6 @@ footer {
   width: 30px;
   height: 30px;
 }
+.is-horizontal-center {
+  justify-content: center;
+}
