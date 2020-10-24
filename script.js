@@ -10,8 +10,8 @@ function inIt() {
 
   if (storedGame !== null) {
     gameName = storedGame;
+    gameInfoGet(gameName);
   }
-  gameInfoGet(gameName);
 }
 function gameDesGet() {
   var apiKey = "48e7971f0afc14da18804ba215d72302b787f0f2";
