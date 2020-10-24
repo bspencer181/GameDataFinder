@@ -13,6 +13,27 @@ function inIt() {
   }
   gameInfoGet(gameName);
 }
+function gameDesGet() {
+  var apiKey = "48e7971f0afc14da18804ba215d72302b787f0f2";
+  var queryURL =
+    "http://www.giantbomb.com/api/search/?api_key=" +
+    apiKey +
+    "&format=json&query=" +
+    gameName +
+    "&resources=game";
+  $.ajax({
+    url: queryURL,
+    dataType: "jsonp",
+    jsonp: "json_callback",
+    data: {
+      api_key: "48e7971f0afc14da18804ba215d72302b787f0f2",
+      format: "jsonp",
+    },
+    success: function (res) {
+      gameDescription(res);
+    },
+  });
+}
 function gameInfoGet() {
   var apiKey = "3ec2268b285d466b9f4b6c8932e66318";
   var queryURL =
@@ -61,5 +82,12 @@ function displayGameInfo(game) {
   }
   $("<li>")
     .text("Platforms: " + platforms)
+    .appendTo("#game-Info");
+  gameDesGet();
+}
+function gameDescription(game) {
+  console.log(game);
+  $("<li>")
+    .text("Descirption: " + game.results[0].deck)
     .appendTo("#game-Info");
 }
