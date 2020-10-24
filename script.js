@@ -1,4 +1,53 @@
 $("#Search-Btn").on("click", function () {
+<<<<<<< HEAD
+    $("#game-Name").empty();
+    gameInfoGet();
+  });
+  function gameInfoGet() {
+    var apiKey = "3ec2268b285d466b9f4b6c8932e66318";
+    var gameName = $("#game-Name").val().trim();
+    var queryURL =
+      "https://api.rawg.io/api/games?key=" + apiKey + "&search=" + gameName;
+  
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+      displayGameInfo(response);
+    });
+  }
+  function displayGameInfo(game) {
+    $("#game-data").empty();
+    $("#game-Name").val("");
+    $("#stat").attr("style", "visibility: visible");
+    $("#game-data").attr("style", "visibility: visible");
+    $("<div>")
+      .text("Title: " + game.results[0].name)
+      .appendTo("#game-data");
+    $("<li>")
+      .text("Rating: " + game.results[0].score)
+      .appendTo("#game-data");
+    $("<li>")
+      .text("Release Date: " + game.results[0].released)
+      .appendTo("#game-data");
+    var tags = "";
+    for (var i = 0; i < 10; i++) {
+      tags += game.results[0].tags[i].name + ", ";
+    }
+    $("<li>")
+      .text("Tags: " + tags)
+      .appendTo("#game-data");
+  
+    var platforms = "";
+    for (var i = 0; i < game.results[0].platforms.length; i++) {
+      platforms += game.results[0].platforms[i].platform.name + ", ";
+    }
+    $("<li>")
+      .text("Platforms: " + platforms)
+      .appendTo("#game-data");
+  }
+=======
   $("#game-Name").empty();
   gameInfoGet();
 });
@@ -52,3 +101,4 @@ function displayGameInfo(game) {
     .text("Platforms: " + platforms)
     .appendTo("#game-Info");
 }
+>>>>>>> origin/Develop
