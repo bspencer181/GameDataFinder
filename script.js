@@ -1,8 +1,19 @@
-$("#Search-Btn").on("click", function () {
-    $("#game-Name").empty();
-    gameInfoGet();
-  });
-  function gameInfoGet() {
+var gameSearches = [];
+function init() {
+    var gameSearchStorage = JSON.parse(localStorage.getItem("gameSearchStorage"));
+    if (gameSearchStorage !== null) {
+      gameSearches = gameSearchStorage;
+    }
+}
+  // function for store data in local storage 
+function storeGame() {
+    // gameSearches Array to local Storage
+    localStorage.setItem("gameSearchStorage", JSON.stringify(gameSearches));
+} 
+
+ 
+  
+function gameInfoGet() {
     var apiKey = "3ec2268b285d466b9f4b6c8932e66318";
     var gameName = $("#game-Name").val().trim();
     var queryURL =
@@ -15,28 +26,35 @@ $("#Search-Btn").on("click", function () {
       console.log(response);
       displayGameInfo(response);
     });
-  }
-  function displayGameInfo(game) {
-    $("#game-data").empty();
+}
+function displayGameInfo(game) {
+   
+    $("#game-Info").empty();
     $("#game-Name").val("");
+    $("#screenshot").empty();
     $("#stat").attr("style", "visibility: visible");
-    $("#game-data").attr("style", "visibility: visible");
+    $("#game-Title").attr("style", "visibility: visible");
+    $("#screenshot").attr("style", "visibility: visible");
     $("<div>")
       .text("Title: " + game.results[0].name)
-      .appendTo("#game-data");
+      .appendTo("#game-Title");
+    $("<img>")
+      .attr("src", game.results[0].background_image)
+      .css("width", "30%", "height", "30%")
+      .appendTo("#screenshot");
     $("<li>")
       .text("Rating: " + game.results[0].score)
-      .appendTo("#game-data");
+      .appendTo("#game-Info");
     $("<li>")
       .text("Release Date: " + game.results[0].released)
-      .appendTo("#game-data");
+      .appendTo("#game-Info");
     var tags = "";
     for (var i = 0; i < 10; i++) {
       tags += game.results[0].tags[i].name + ", ";
     }
     $("<li>")
       .text("Tags: " + tags)
-      .appendTo("#game-data");
+      .appendTo("#game-Info");
   
     var platforms = "";
     for (var i = 0; i < game.results[0].platforms.length; i++) {
@@ -44,5 +62,27 @@ $("#Search-Btn").on("click", function () {
     }
     $("<li>")
       .text("Platforms: " + platforms)
-      .appendTo("#game-data");
-  }
+      .appendTo("#game-Info");
+}
+  // initial function
+  $("#Search-Btn").on("click", function (event) {
+    event.preventDefault();
+    var searchGame = $("#game-Name").val().trim();
+    $("#game-Name").empty();
+    gameSearches.push(searchGame)
+    gameInfoGet();
+    storeGame();
+    recentSearches();
+  }); 
+  
+function recentSearches() {
+    $("#search-history").empty();
+    for (var i = 0; i < gameSearches.length; i++) {
+      var searchHistory = '<tr><th scope="row">' + gameSearches[i] + "</th></tr>";
+      $("#search-history").append(searchHistory);
+    //  $("#search-history").append("#game-Title");
+    }
+}
+  init();
+  console.log(gameSearches.length);
+  recentSearches();
