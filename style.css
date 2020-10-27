@@ -17,7 +17,7 @@ h1 {
   text-align: center;
 }
 /*footer part of  page */
-footer {
+.footer {
   background-color: #343a40;
   height: 4rem;
   padding: 18px;
