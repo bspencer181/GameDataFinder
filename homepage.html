@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Game!</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <script defer src="./script.js"></script>
+  </head>
+  <nav class="navbar is-dark mb-5" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./homepage.html">
+        <img
+          src="./Assets/GC.png"
+          alt="Game Controller"
+          width="100"
+          height="28"
+        />
+      </a>
+      <div class="navbar-item">
+        Game Data Finder
+      </div>
+  </nav>
+  <body>
+
+
+    <div class="columns mt-5 ">
+      <div class="column is-5"></div>
+      <div class="column is-2">
+            <div class="control">
+              <input id="game-Name" class="input has-text-centered" type="text" placeholder="Game title" />
+            </div>
+      </div>
+      <div class="column is-5"></div>
+    </div>
+
+    <div class="columns mt-5 is-centered">
+      <div class="column is-5"></div>
+      <div class="column is-2 has-text-centered">
+        <button id="Search-Btn" class="button is-dark">Search!</button>
+      </div>
+      <div class="column is-5"></div>
+    </div>
+    <div id ="search-Info"class="container has-text-white"><h1>Type the name of the game you would like information on in the search box then click the search button.</h1></div>
+   <div class="columns mt-5 is-centered">
+     <div id="game-Title" style="visibility: hidden;" class="column is-4 has-text-white has-text-centered"></div>
+   </div>
+    <div id="screenshot" class="columns is-horizontal-center" style="visibility: hidden;"></div>
+   <div class="columns is-centered">
+      <div id="stat" class="column is-2 has-text-white" style="visibility: hidden;">
+        <h1>Game Stats: </h1>
+      <ul id="game-Info" class="mt-2">
+
+      </ul>
+    </div>
+   </div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+    <div class="block" style="visibility: hidden;"><h1>""</h1></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+
+  <footer class="fixed-bottom footer is-dark">
+    <p class="text-center mx-4">
+        Game Finders By:Logan
+        <!--Logan social media links-->
+        <a  href="https://github.com/LoganPippin"><img class="icon" src="./Assets/github-128.png" alt="GitHub Profile"></a>
+        <a  href="https://www.linkedin.com/in/logan-pippin-3140371b5/"><img class="icon" src="./Assets/square-linkedin-128.png" alt="LinkedIn Profile"></a>
+        Beth
+        <!--Beth social media links-->
+        <a  href="https://github.com/bspencer181"><img class="icon" src="./Assets/github-128.png" alt="GitHub Profile"></a>
+        <a  href="https://www.linkedin.com/in/beth-spencer-2b374a1b5/"><img class="icon" src="./Assets/square-linkedin-128.png" alt="LinkedIn Profile"></a>
+        Parth 
+        <!--Parth social media links-->
+        <a  href="https://github.com/parth167"><img class="icon" src="./Assets/github-128.png" alt="GitHub Profile"></a>
+        <a  href="https://www.linkedin.com/in/parth-patel-4725381b5/ "><img class="icon" src="./Assets/square-linkedin-128.png" alt="LinkedIn Profile"></a>
+    </p>
+   
+</footer>
+</html>
