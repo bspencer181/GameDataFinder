@@ -57,7 +57,7 @@ function displayGameInfo(game) {
   $("#game-Title").attr("style", "visibility: visible");
   $("#screenshot").attr("style", "visibility: visible");
   $("<div>")
-    .text("Title: " + game.results[0].name)
+    .html("<h3>" + game.results[0].name+"</h3>")
     .appendTo("#game-Title");
   $("<img>")
     .attr("src", game.results[0].background_image)
