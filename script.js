@@ -48,6 +48,7 @@ function gameInfoGet() {
   });
 }
 function displayGameInfo(game) {
+  $("#search-Info").empty();
   $("#game-Info").empty();
   $("#game-Name").val("");
   $("#game-Title").empty();
@@ -69,7 +70,7 @@ function displayGameInfo(game) {
     .text("Release Date: " + game.results[0].released)
     .appendTo("#game-Info");
   var tags = "";
-  for (var i = 0; i < game.results[0].tags.length; i++) {
+  for (var i = 0; i < 4; i++) {
     tags += game.results[0].tags[i].name + ", ";
   }
   $("<li>")
