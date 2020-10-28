@@ -15,23 +15,17 @@ function inIt() {
 }
 function gameDesGet() {
   var apiKey = "48e7971f0afc14da18804ba215d72302b787f0f2";
-  var queryURL =
-    "http://www.giantbomb.com/api/search/?api_key=" +
-    apiKey +
-    "&format=json&query=" +
-    gameName +
-    "&resources=game";
+  var baseUrl = "http://www.giantbomb.com/api";
+  var queryURL = baseUrl + "/search/?api_key=" + apiKey + "&format=json";
+
   $.ajax({
-    url: queryURL,
-    dataType: "jsonp",
-    jsonp: "json_callback",
-    data: {
-      api_key: "48e7971f0afc14da18804ba215d72302b787f0f2",
-      format: "jsonp",
-    },
-    success: function (res) {
-      gameDescription(res);
-    },
+    url:
+      "https://cors-anywhere.herokuapp.com/" +
+      queryURL +
+      "&query=" +
+      encodeURI(gameName),
+    dataType: "json",
+    success: gameDescription,
   });
 }
 function gameInfoGet() {
