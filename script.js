@@ -17,7 +17,7 @@ function gameDesGet() {
   var apiKey = "48e7971f0afc14da18804ba215d72302b787f0f2";
   var baseUrl = "http://www.giantbomb.com/api";
   var queryURL = baseUrl + "/search/?api_key=" + apiKey + "&format=json";
-
+  
   $.ajax({
     url:
       "https://cors-anywhere.herokuapp.com/" +
