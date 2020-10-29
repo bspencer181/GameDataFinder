@@ -51,14 +51,14 @@ function displayGameInfo(game) {
   $("#game-Title").attr("style", "visibility: visible");
   $("#screenshot").attr("style", "visibility: visible");
   $("<div>")
-    .text("Title: " + game.results[0].name)
+    .html("<h1>" + game.results[0].name+"</h1>")
     .appendTo("#game-Title");
   $("<img>")
     .attr("src", game.results[0].background_image)
     .css("width", "30%", "height", "30%")
     .appendTo("#screenshot");
   $("<li>")
-    .text("Rating: " + game.results[0].score)
+    .html("<h3>Rating: " + game.results[0].score+"</h3>")
     .appendTo("#game-Info");
   $("<li>")
     .text("Release Date: " + game.results[0].released)
