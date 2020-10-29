@@ -16,7 +16,7 @@ function inIt() {
 function gameDesGet() {
   var apiKey = "48e7971f0afc14da18804ba215d72302b787f0f2";
   var queryURL =
-    "http://www.giantbomb.com/api/search/?api_key=" +
+    "https://www.giantbomb.com/api/search/?api_key=" +
     apiKey +
     "&format=json&query=" +
     gameName +
