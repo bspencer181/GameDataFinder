@@ -64,7 +64,7 @@ function displayGameInfo(game) {
     .css("width", "30%", "height", "30%")
     .appendTo("#screenshot");
   $("<li>")
-    .html("<h2>Rating: " + game.results[0].score+"</h2>")
+    .html("<h3>Rating: " + game.results[0].score+"</h3>")
     .appendTo("#game-Info");
   $("<li>")
     .text("Release Date: " + game.results[0].released)

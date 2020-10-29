@@ -16,19 +16,28 @@ h1 {
   color: white;
   text-align: center;
   font-family: "Staatliches", cursive;
-  font-size: xx-large;
+  font-size: 30px;
 }
 
 #game-Title {
   color: white;
   text-align: center;
   font-family: "Staatliches", cursive;
-  font-size: xx-large;
+  font-size: 60px;
 }
+
+#game-Info {
+  line-height:60%;
+  width: 400px;
+  font-size: 60px;
+  
+}
+
 li {
   color: white;
-  font-family: "Staatliches", cursive;
-  font-size: large;
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+
 }
 
 .field {
